@@ -24,7 +24,7 @@ function mostrarCarrito() {
     if (totalSpan) totalSpan.textContent = total;
 
     // WhatsApp
-    const numeroWhatsApp = "542984248439"; // Cambia por tu número real
+    const numeroWhatsApp = "5492984248439"; // Cambia por tu número real
     const linkCompra = document.getElementById('whatsapp-link');
     if (linkCompra) {
       if (carrito.length > 0) {
