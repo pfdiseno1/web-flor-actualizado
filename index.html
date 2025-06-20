@@ -40,14 +40,14 @@
             <li><a href="#reseñas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
             </ul>
-            </div>            
-        </nav>
-            <div class="compra">    
-                <li><a href="#" id="carro-btn">
-             <img class="carro" src="./asset/logo/carro-sin-fondo-nvo-tamano.png" alt="Carrito"> 
-              <span class="tenes">Tu compra</span><span id="cart-count">0</span></a>
-                </li>
-            </div>
+                        
+        </nav><!-- Dentro de tu <ul> del menú, NO envuelvas el <li> en un <div> -->
+        <li class="compra"><a href="#" id="abrir-carrito">
+            <img class="carro" src="asset/logo/carro-sin-fondo-nvo-tamano.png" alt="Carrito" style="height:24px;vertical-align:middle;">
+            <span class="tenes">Tu compra</span>
+            (<span id="carrito-cantidad">0</span>)
+  </a>
+</li>
             
 
     </header>
@@ -121,9 +121,11 @@
                     <h2>Splash Basico</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nisi odio recusandae quae molestiae suscipit minus corporis possimus nostrum unde vitae aliquid aut earum quas laudantium quis itaque, nemo inventore?</p>
                 </div>
-                <div class="footer">
-                    
-                    <button class="boton" onclick="agregarAlCarrito('Splash Basico')">ADHERIR</button></div>
+                    <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Brazadas de Plata" data-precio="100">Lo quiero!
+                    </button>
+                </div>
             </div>
 
             <div class="card card-dos">
@@ -132,7 +134,11 @@
                     <h2>Brazadas de Plata</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nisi odio recusandae quae molestiae suscipit minus corporis possimus nostrum unde vitae aliquid aut earum quas laudantium quis itaque, nemo inventore?</p>
                 </div>
-                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Brazadas de Plata')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Brazadas de Plata" data-precio="100">Lo quiero!
+                    </button>
+                </div>
             </div>
 
             <div class="card card-tres">
@@ -141,7 +147,11 @@
                     <h2>Rendimiento de Oro</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nisi odio recusandae quae molestiae suscipit minus corporis possimus nostrum unde vitae aliquid aut earum quas laudantium quis itaque, nemo inventore?</p>
                 </div>
-                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Rendimiento de Oro')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Rendimiento de Oro" data-precio="100">Lo quiero!
+                    </button>
+                </div>
             </div>
             
         </div>
@@ -155,7 +165,10 @@
                     <h2>Estilo Espalda: "Relajate y Fluye"</h2>
                     <p> Este estilo es ideal para desarrollar resistencia y mejorar la flotabilidad. Exploraremos como mejorar la técnica para maximizar la velocidad y minimizar el esfuerzo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Espalda:Relajate y Fluye')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Estilo Espalda"   data-precio="100">Al carrito!</button>
+                </div>
             </div>
 
             <div class="capacitacion capacitacion-dos">
@@ -164,7 +177,10 @@
                     <h2>Estilo Crol: "Acelerando el Ritmo"</h2>
                     <p> Trabajaremos en los principios fundamentales del estilo, para que cualquier nadador pueda optimizar su ritmo y mejorar su resistencia.</p>
                 </div>
-                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Crol:Acelerandeo el Ritmo')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Estilo Crol" data-precio="100">Al carrito!</button>
+                </div>
             </div>
 
             <div class="capacitacion capacitacion-tres">
@@ -173,7 +189,10 @@
                     <h2>Mariposa:"Rompé el Agua"</h2>
                     <p>El estilo mas exigente y espectacular. Prueba definitiva de coordinación, potencia y resistencia. Desglosaremos cada fase del estilo para que logres movimientos fluidos sin desperdiciar energía.</p>
                 </div>
-                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Mariposa:Rompe el Agua)">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Splash Basico" 
+                    data-precio="100">Al carrito!</button></div>
             </div>
 
             <div class="capacitacion capacitacion-cuatro">
@@ -182,7 +201,11 @@
                     <h2>Pecho:"Conquista el Agua"</h2>
                     <p>Ritmo pausado y exigente coordinación. Mejoraras la estabilidad en el agua, fortaleciendo piernas y torso. Aprenderemos como ejecutar cada fase correctamente, potenciando la eficiencia en cada brazada.</p>
                 </div>
-                <div class="footer"><button class="boton"onclick="agregarAlCarrito('Pecho:Conquista el Agua')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Estilo Pecho" 
+                    data-precio="100">Al carrito!</button>
+                </div>
             </div>           
 
         </div>
@@ -196,7 +219,11 @@
                     <h2>El arte de nadar</h2>
                     <p>Un libro que explora la técnica y la filosofía detrás de la natación. Aprenderás sobre la importancia de la respiración, la postura y el ritmo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton"onclick="agregarAlCarrito('El Arte de Nadar')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="El Arte de Nadar" 
+                    data-precio="100">Al carrito!</button>
+                </div>
             </div>
 
             <div class="libro libro-dos">
@@ -205,7 +232,11 @@
                     <h2>Tecnica y Perfeccion</h2>
                     <p>Un enfoque integral para mejorar tu rendimiento en la natación. Incluye rutinas de entrenamiento, ejercicios específicos y consejos para optimizar tu tiempo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton"onclick="agregarAlCarrito('Tecnica y Perfeccion')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="Técnica y Perfección" 
+                    data-precio="100">Al carrito!</button>
+                </div>
             </div>
 
             <div class="libro libro-tres">
@@ -214,9 +245,13 @@
                     <h2>El deslizamiento Perfecto</h2>
                     <p>Un recurso valioso para nadadores de todos los niveles. Desde principiantes hasta avanzados, encontrarás consejos prácticos y técnicas efectivas para mejorar tu estilo.</p>
                 </div>
-                <div class="footer"><button class="boton"onclick="agregarAlCarrito('El Deslizamiento Perfecto')">ADHERIR</button></div>
+                <div class="footer">
+                    <button class="boton add-to-cart-btn" 
+                    data-nombre="El Deslizamiento Perfecto" 
+                    data-precio="100">Al carrito!</button></div>
             </div>
         </div>
+        
         
 
             
@@ -287,12 +322,16 @@
     <br>
     <br>
 
-    <div id="carrito-container">
+    
+    <div id="carrito-modal" style="display:none; position:fixed; top:80px; right:30px; background:#fff; border:1px solid #ccc; box-shadow:0 4px 16px rgba(0,0,0,0.2); padding:20px; z-index:2000; width:320px; border-radius:10px;">
     <h3>Carrito de compras</h3>
     <ul id="carrito-lista"></ul>
+    <p>Total: $<span id="carrito-total">0</span></p>
     <button onclick="vaciarCarrito()">Vaciar carrito</button>
-</div>
-    
+    <button onclick="finalizarCompra()">Finalizar compra</button>
+    <button id="cerrar-carrito">Cerrar</button>
+    </div>
+
 <script src="carrito.js"></script>
     
 </body>
