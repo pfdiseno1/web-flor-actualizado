@@ -135,6 +135,26 @@ p{
     font-weight: 400;
 
 }
+.compra{
+    display: flex;
+    flex-direction: column;
+    align-items: center;              
+}
+.carro{
+    width: 90px;
+    height: auto;
+    margin-right: 10px;
+}
+.tenes{
+    display: flex;
+    flex-direction: column;
+    font-family:'Playfair';
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: 1.5s;
+    color: black;
+}
 #inicio{
     margin: 30px;
     display: flex;

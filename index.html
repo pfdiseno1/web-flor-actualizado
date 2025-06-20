@@ -25,13 +25,13 @@
             <a href="#inicio" class="logo"><img src="./asset/logo/logo_limpio-sin-fondo.png" alt="Logo Flor Oliver"></a>
             <span class="site-name">@floroliver.natacion</span>
         </div>
-    <nav class="menu">
-        <ul>
+        <nav class="menu">
+            <ul>
             <li><a href="#inicio">Home</a></li>
             <li><a href="#flor">Soy Flor</a></li>
             <li class="menu-servicios">
                 <a href="#servicios">Servicios</a>
-            <ul class="submenu">
+                            <ul class="submenu">
                 <li><a href="#entrenamientos">Entrenamientos</a></li>
                 <li><a href="#capacitaciones">Capacitaciones</a></li>
                 <li><a href="#libros">Libros</a></li>
@@ -39,10 +39,19 @@
             </li>
             <li><a href="#reseñas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+            </ul>
+            </div>            
+        </nav>
+            <div class="compra">    
+                <li><a href="#" id="carro-btn">
+             <img class="carro" src="./asset/logo/carro-sin-fondo-nvo-tamano.png" alt="Carrito"> 
+              <span class="tenes">Tu compra</span><span id="cart-count">0</span></a>
+                </li>
+            </div>
+            
 
     </header>
+
 
        <section id="inicio">
         <div class="bienvenidos-container">
@@ -114,7 +123,7 @@
                 </div>
                 <div class="footer">
                     
-                    <button class="boton">ADHERIR</button></div>
+                    <button class="boton" onclick="agregarAlCarrito('Splash Basico')">ADHERIR</button></div>
             </div>
 
             <div class="card card-dos">
@@ -123,7 +132,7 @@
                     <h2>Brazadas de Plata</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nisi odio recusandae quae molestiae suscipit minus corporis possimus nostrum unde vitae aliquid aut earum quas laudantium quis itaque, nemo inventore?</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Brazadas de Plata')">ADHERIR</button></div>
             </div>
 
             <div class="card card-tres">
@@ -132,7 +141,7 @@
                     <h2>Rendimiento de Oro</h2>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis nisi odio recusandae quae molestiae suscipit minus corporis possimus nostrum unde vitae aliquid aut earum quas laudantium quis itaque, nemo inventore?</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Rendimiento de Oro')">ADHERIR</button></div>
             </div>
             
         </div>
@@ -146,7 +155,7 @@
                     <h2>Estilo Espalda: "Relajate y Fluye"</h2>
                     <p> Este estilo es ideal para desarrollar resistencia y mejorar la flotabilidad. Exploraremos como mejorar la técnica para maximizar la velocidad y minimizar el esfuerzo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Espalda:Relajate y Fluye')">ADHERIR</button></div>
             </div>
 
             <div class="capacitacion capacitacion-dos">
@@ -155,7 +164,7 @@
                     <h2>Estilo Crol: "Acelerando el Ritmo"</h2>
                     <p> Trabajaremos en los principios fundamentales del estilo, para que cualquier nadador pueda optimizar su ritmo y mejorar su resistencia.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Crol:Acelerandeo el Ritmo')">ADHERIR</button></div>
             </div>
 
             <div class="capacitacion capacitacion-tres">
@@ -164,7 +173,7 @@
                     <h2>Mariposa:"Rompé el Agua"</h2>
                     <p>El estilo mas exigente y espectacular. Prueba definitiva de coordinación, potencia y resistencia. Desglosaremos cada fase del estilo para que logres movimientos fluidos sin desperdiciar energía.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton" onclick="agregarAlCarrito('Mariposa:Rompe el Agua)">ADHERIR</button></div>
             </div>
 
             <div class="capacitacion capacitacion-cuatro">
@@ -173,7 +182,7 @@
                     <h2>Pecho:"Conquista el Agua"</h2>
                     <p>Ritmo pausado y exigente coordinación. Mejoraras la estabilidad en el agua, fortaleciendo piernas y torso. Aprenderemos como ejecutar cada fase correctamente, potenciando la eficiencia en cada brazada.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton"onclick="agregarAlCarrito('Pecho:Conquista el Agua')">ADHERIR</button></div>
             </div>           
 
         </div>
@@ -187,25 +196,25 @@
                     <h2>El arte de nadar</h2>
                     <p>Un libro que explora la técnica y la filosofía detrás de la natación. Aprenderás sobre la importancia de la respiración, la postura y el ritmo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton"onclick="agregarAlCarrito('El Arte de Nadar')">ADHERIR</button></div>
             </div>
 
             <div class="libro libro-dos">
                 <img class="imagen-libro" src="./asset/libros/Portada_Pecho.png">
                 <div class="contenido-libro">
-                    <h2>Entrenamiento en el agua</h2>
+                    <h2>Tecnica y Perfeccion</h2>
                     <p>Un enfoque integral para mejorar tu rendimiento en la natación. Incluye rutinas de entrenamiento, ejercicios específicos y consejos para optimizar tu tiempo en el agua.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton"onclick="agregarAlCarrito('Tecnica y Perfeccion')">ADHERIR</button></div>
             </div>
 
             <div class="libro libro-tres">
                 <img class="imagen-libro" src="./asset/libros/Portada-Estilo-Espalda.png">
                 <div class="contenido-libro">
-                    <h2>Natación para todos</h2>
+                    <h2>El deslizamiento Perfecto</h2>
                     <p>Un recurso valioso para nadadores de todos los niveles. Desde principiantes hasta avanzados, encontrarás consejos prácticos y técnicas efectivas para mejorar tu estilo.</p>
                 </div>
-                <div class="footer"><button class="boton">ADHERIR</button></div>
+                <div class="footer"><button class="boton"onclick="agregarAlCarrito('El Deslizamiento Perfecto')">ADHERIR</button></div>
             </div>
         </div>
         
@@ -278,7 +287,13 @@
     <br>
     <br>
 
+    <div id="carrito-container">
+    <h3>Carrito de compras</h3>
+    <ul id="carrito-lista"></ul>
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
+</div>
     
+<script src="carrito.js"></script>
     
 </body>
 <footer>
