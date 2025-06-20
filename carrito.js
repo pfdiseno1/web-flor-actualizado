@@ -22,6 +22,24 @@ function mostrarCarrito() {
     });
     const totalSpan = document.getElementById('carrito-total');
     if (totalSpan) totalSpan.textContent = total;
+
+    // WhatsApp
+    const numeroWhatsApp = "542984248439"; // Cambia por tu número real
+    const linkCompra = document.getElementById('whatsapp-link');
+    if (linkCompra) {
+      if (carrito.length > 0) {
+        let mensaje = "¡Hola! Quiero comprar:\n";
+        carrito.forEach(prod => {
+          mensaje += `- ${prod.nombre} ($${prod.precio})\n`;
+        });
+        mensaje += `Total: $${total}`;
+        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+        linkCompra.href = url;
+        linkCompra.style.display = "inline-block";
+      } else {
+        linkCompra.style.display = "none";
+      }
+    }
 }
 
 function vaciarCarrito() {
