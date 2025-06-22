@@ -155,6 +155,86 @@ p{
     transition: 1.5s;
     color: black;
 }
+#carrito-modal {
+    display: none;
+    position: fixed;
+    top: 80px;
+    right: 30px;
+    width: 340px;
+    min-height: 320px;
+    background: #fff;
+    background-image: radial-gradient(circle at 44.5% 50.97%, #01edff 0, #3cb5f281 50%, #3f80ab9e 100%);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    padding: 24px 20px 20px 20px;
+    z-index: 2000;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-size: 18px;
+    color: #0a4a6e;
+}
+.botones-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    margin-top: 10px;
+}
+.botones-carrito button,
+.botones-carrito .boton-link-compra {
+    width: 100%;
+    border-radius: 5px;
+    background-color: rgb(130, 219, 219);
+}
+.boton-link-compra {
+    background: #25d366;
+    color: #fff;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: background 0.2s;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.boton-link-compra:hover {
+    background: #128c7e;
+    color: #fff;
+}
+#carrito-lista button {
+    background: #ff5252;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 12px;
+    font-size: 15px;
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+#carrito-lista button:hover {
+    background: #c62828;
+}
+#cerrar-carrito {
+    margin-top: 10px;
+}
+
 #inicio{
     margin: 30px;
     display: flex;
@@ -417,6 +497,7 @@ p{
     width: 100%;
     margin: 10px;
     padding: 15px; 
+    
 }
 
 .referencias{
@@ -534,15 +615,34 @@ p{
     justify-content: space-around;
     margin: 30px;
 }
+.contacto-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+}
+
 .encontraras{
     margin: 20px;
-    padding: 10px;
-    
-   
+    padding: 10px;   
+}
+.encontraras p {
+    font-family: 'MERRYWEATHER';
+    /* Sombra múltiple para efecto 3D */
+    text-shadow:
+        1px 1px 0 #b3e0fc,   /* luz superior */
+        2px 2px 2px #3cb5f2, /* sombra principal */
+        4px 4px 8px #00070b; /* sombra profunda */
 }
 img{
     width: 20em;
-
+}
+.encontraras h4{
+    font-family: 'Playfair';
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 10px;
 }
 .instagram{
     width: 230px;
@@ -565,4 +665,3 @@ footer{
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
     
 }
-

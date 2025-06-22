@@ -39,15 +39,16 @@
             </li>
             <li><a href="#reseñas">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
+            <li class="compra"><a href="#" id="abrir-carrito">
+            <img class="carro" src="asset/logo/carro-sin-fondo-nvo-tamano.png" alt="Carrito" style="height:24px;vertical-align:middle;">
+            <span class="tenes">Tu compra</span>
+            (<span id="carrito-cantidad">0</span>)</a>
+        </li>
+
             </ul>
                         
         </nav><!-- Dentro de tu <ul> del menú, NO envuelvas el <li> en un <div> -->
-        <li class="compra"><a href="#" id="abrir-carrito">
-            <img class="carro" src="asset/logo/carro-sin-fondo-nvo-tamano.png" alt="Carrito" style="height:24px;vertical-align:middle;">
-            <span class="tenes">Tu compra</span>
-            (<span id="carrito-cantidad">0</span>)
-  </a>
-</li>
+        
             
 
     </header>
@@ -68,7 +69,7 @@
         <p>Ya sea que estés buscando un objetivo en particular, mejorar tu estilo o prepararte para competencias, en floroliver.natación encontrarás el apoyo y la experiencia necesarios para alcanzar tus metas acuáticas. ¡Ven y descubre la alegría de nadar conmigo!</p>
     </section>
     <br>
-</div>
+
 
     <section id="flor">
         <div class="flor-container">
@@ -302,37 +303,43 @@
 
 
         <div class="contacto-padre">
-            <div class="contacto contacto-uno">
-                <img class="instagram" src="./asset/contacto/instagram sin fondo(2).webp">
-            </div>
-            <div class="encontraras">
-                <h2>INSTAGRAM</h2>
-                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium necessitatibus quam, possimus animi amet quasi perspiciatis eos vero repellendus minus praesentium iusto perferendis deserunt iure! A harum mollitia nihil quidem!</P>
-            </div>
+            <div class="contacto-info">
+    <a href="https://instagram.com/floroliver.natacion" target="_blank">
+        <img class="instagram" src="./asset/contacto/instagram sin fondo(2).webp" alt="Instagram">
+    </a>
+    <div class="encontraras">
+        <h2>INSTAGRAM</h2>
+            <p>"¿Tenés dudas? ¿Querés sumarte a nadar con nosotros? Mandanos un DM y lo charlamos 💬 ¡Amamos el agua y compartirla con vos!"</p>
+    </div>
+</div>
 
-            <div class="contacto contacto-dos">
-                <a href="https://wa.me/549248439" target="_blank">
-                <img class="whatssapp" src="./asset/contacto/wasap sin fondo.png" alt="WhatsApp">
-                </a>
-            </div>
-            <div class="encontraras">
-                <h2>WHATSSAPP</h2>
-                <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium necessitatibus quam, possimus animi amet quasi perspiciatis eos vero repellendus minus praesentium iusto perferendis deserunt iure! A harum mollitia nihil quidem!</P>
-            </div>
+            <div class="contacto-info">
+    <a href="https://wa.me/5492984248439" target="_blank">
+        <img class="whatssapp" src="./asset/contacto/wasap sin fondo.png" alt="WhatsApp">
+    </a>
+    <div class="encontraras">
+        <h2>WHATSSAPP</h2>
+        <p>“¡Hola! ¿Todo bien?”
+            Gracias por escribirnos 😊 Si tenés ganas de empezar a nadar, mejorar tu técnica o simplemente probar una clase, contanos y te damos toda la info.</p>
+    </div>
+</div>
         </div>
     </section>
     <br>
     <br>
 
     
-    <div id="carrito-modal" style="display:none; position:fixed; top:80px; right:30px; background:#fff; border:1px solid #ccc; box-shadow:0 4px 16px rgba(0,0,0,0.2); padding:20px; z-index:2000; width:320px; border-radius:10px;">
+    <div id="carrito-modal">
   <h3>Carrito de compras</h3>
   <ul id="carrito-lista"></ul>
   <p>Total: $<span id="carrito-total">0</span></p>
-  <button onclick="vaciarCarrito()">Vaciar carrito</button>
+  <div class="botones-carrito">
+    <button onclick="vaciarCarrito()">Vaciar carrito</button>
   <button onclick="finalizarCompra()">Finalizar compra</button>
-  <a href="#" id="whatsapp-link" target="_blank" class="boton-link-compra" style="display:none; margin-top:10px; background:#25d366; color:#fff; padding:8px 12px; border-radius:5px; text-decoration:none;">Avisar por WhatsApp</a>
-  <button id="cerrar-carrito" style="margin-top:10px;">Cerrar</button>
+  <a href="#" id="whatsapp-link" target="_blank" class="boton-link-compra">Avisar por WhatsApp</a>
+  <button id="cerrar-carrito">Cerrar</button>
+  </div>
+  
 </div> 
 
 <script src="carrito.js"></script>

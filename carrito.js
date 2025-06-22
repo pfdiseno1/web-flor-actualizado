@@ -1,4 +1,5 @@
 let carrito = [];
+let ultimoPedido = null; // Guarda el último detalle de compra
 
 function mostrarCarrito() {
     document.getElementById('carrito-cantidad').textContent = carrito.length;
@@ -27,18 +28,21 @@ function mostrarCarrito() {
     const numeroWhatsApp = "5492984248439"; // Cambia por tu número real
     const linkCompra = document.getElementById('whatsapp-link');
     if (linkCompra) {
-      if (carrito.length > 0) {
-        let mensaje = "¡Hola! Quiero comprar:\n";
-        carrito.forEach(prod => {
-          mensaje += `- ${prod.nombre} ($${prod.precio})\n`;
-        });
-        mensaje += `Total: $${total}`;
-        const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
-        linkCompra.href = url;
-        linkCompra.style.display = "inline-block";
-      } else {
-        linkCompra.style.display = "none";
-      }
+        // Usa el carrito si hay productos, si no, usa el último pedido
+        const productosParaEnviar = carrito.length > 0 ? carrito : (ultimoPedido || []);
+        if (productosParaEnviar.length > 0) {
+            let mensaje = "¡Hola! Quiero comprar:\n";
+            productosParaEnviar.forEach(prod => {
+                mensaje += `- ${prod.nombre} ($${prod.precio})\n`;
+            });
+            const totalPedido = productosParaEnviar.reduce((sum, prod) => sum + prod.precio, 0);
+            mensaje += `Total: $${totalPedido}`;
+            const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+            linkCompra.href = url;
+            linkCompra.style.display = "inline-block";
+        } else {
+            linkCompra.style.display = "none";
+        }
     }
 }
 
@@ -52,9 +56,12 @@ function finalizarCompra() {
         alert('El carrito está vacío.');
         return;
     }
-    alert('¡Gracias por tu compra!');
+    // Guarda el detalle antes de vaciar
+    ultimoPedido = [...carrito];
+    alert('¡Gracias por tu compra! Ahora puedes avisar por WhatsApp.');
     vaciarCarrito();
-    document.getElementById('carrito-modal').style.display = 'none';
+    document.getElementById('carrito-modal').style.display = 'flex'; // Mantén abierto el modal
+    mostrarCarrito();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
