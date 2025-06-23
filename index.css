@@ -373,7 +373,6 @@ p{
     justify-content: center;
     align-items: center;
     
-
 }
 .card{
     width: 33%;
@@ -383,8 +382,7 @@ p{
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
-    
+    margin: 30px;    
 }
 .contenido{
     margin: 0px;
@@ -404,6 +402,8 @@ p{
     color: rgba(231, 199, 19, 0.833)
     
 }
+
+
 
 .imagen{
     width: 80%;
@@ -428,52 +428,59 @@ p{
 }
 
 .capacitacion-padre{
-    width: 100%;
-    margin: 10px;
-    padding: 15px; 
-    display: flex;
-    flex-direction: row;
+    width: 90%;
+    margin: 10px auto;
+    padding: 0; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    /* Añadido para que los elementos se ajusten al espacio disponible */
     
 }
 .capacitacion{  
-    width: 50%;
+    min-width: 260px; /* Ancho mínimo para cada tarjeta */
     box-shadow: -1px 10px 10px 10px rgba(0,0,0,0.5);  
-    border-radius: 2.5%; 
+    border-radius: 16px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
+    margin: 0;
 }
 .libros {
     width: 100%;    
-    border-radius: 2.5%; 
+    border-radius: 16px; 
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 30px;    
+    margin: 30px 0;    
    
 }
 
 .libro-padre {
-    width: 100%;
-    margin: 10px;
-    padding: 15px; 
+    width: 90%;
+    margin: 10px auto;
+    padding: 0; 
     display: flex;
     flex-direction: row;
-    align-items: center;       
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    /* Cambiado a flexbox para mejor adaptabilidad */
+    gap: 40px;       
 }
-.libro{
-     
-    width: 50%;
+.libro{     
+    width: 380px; /* Ancho fijo para cada tarjeta */
+    min-width: 220px; /* Ancho mínimo para cada tarjeta */
+    max-width: 100%;
     box-shadow: -1px 10px 10px 10px rgba(0,0,0,0.5);  
-    border-radius: 2.5%; 
+    border-radius: 16px; 
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 30px;
+    justify-content: flex-start;
+    margin: 0;
 }
-
 
 .contenido-libro{    
     margin: 0px;
@@ -486,11 +493,11 @@ p{
 .imagen-libro{
     width: 80%;
     height: auto;
-    margin: 15px;
+    margin: 15px auto 15px auto;
     border: solid whitesmoke 1.5px;
-    border-radius: 5%;
+    border-radius: 12px;
     box-shadow: 15px 10px 10px 0px rgba(0,0,0,0.5);
-    align-items: center;
+    align-items: block;
 }
 
 #reseñas{
