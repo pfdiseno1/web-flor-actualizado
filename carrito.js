@@ -31,7 +31,7 @@ function mostrarCarrito() {
         // Usa el carrito si hay productos, si no, usa el último pedido
         const productosParaEnviar = carrito.length > 0 ? carrito : (ultimoPedido || []);
         if (productosParaEnviar.length > 0) {
-            let mensaje = "¡Hola! Quiero comprar:\n";
+            let mensaje = "¡Hola Flor! Acabo de comprar:\n";
             productosParaEnviar.forEach(prod => {
                 mensaje += `- ${prod.nombre} ($${prod.precio})\n`;
             });
@@ -58,7 +58,7 @@ function finalizarCompra() {
     }
     // Guarda el detalle antes de vaciar
     ultimoPedido = [...carrito];
-    alert('¡Gracias por tu compra! Ahora puedes avisar por WhatsApp.');
+    alert('¡Gracias por tu compra!Presiona el boton de WhatsApp para confirmar tu pedido.');
     vaciarCarrito();
     document.getElementById('carrito-modal').style.display = 'flex'; // Mantén abierto el modal
     mostrarCarrito();
