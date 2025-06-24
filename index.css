@@ -461,17 +461,14 @@ p{
     width: 90%;
     margin: 10px auto;
     padding: 0; 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
-    /* Cambiado a flexbox para mejor adaptabilidad */
-    gap: 40px;       
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Cambiado a grid para mejor distribución */
+    gap: 40px; /* Espacio entre tarjetas */
 }
 .libro{     
-    width: 380px; /* Ancho fijo para cada tarjeta */
-    min-width: 220px; /* Ancho mínimo para cada tarjeta */
+    width: 100%; /* El grid controla el ancho */
+    min-width: 0; 
     max-width: 100%;
     box-shadow: -1px 10px 10px 10px rgba(0,0,0,0.5);  
     border-radius: 16px; 
