@@ -235,6 +235,7 @@ p{
     margin-top: 10px;
 }
 
+
 #inicio{
     margin: 30px;
     display: flex;
@@ -271,11 +272,11 @@ p{
 
 }
   
-  .flor-container h2 {
+.flor-container h2 {
     grid-column: span 2;
     text-align: center;
     margin-bottom: 0;    
-  }
+  }*/
   
   .foto {
     display: flex;
@@ -328,7 +329,7 @@ p{
     font-weight: bold;
     padding: 15px;
     
-}
+}*/
 .formacion h3{
     font-family: cursive;
     font-size: 20px;
@@ -392,7 +393,7 @@ p{
            
 }
 
-.bronce{
+/*.bronce{
     color: rgba(205, 127, 50);
 }
 .silver{
@@ -401,7 +402,7 @@ p{
 .gold{
     color: rgba(231, 199, 19, 0.833)
     
-}
+}*/
 
 
 
@@ -575,7 +576,7 @@ p{
     font-size: 35px;
     font-weight: bold;
     padding: 15px;
-    text-align: center; /* Centrar el título */
+    text-align: center; /* Centrar el título*/
 }
 .hablame{    
     margin: 30px;
