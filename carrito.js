@@ -64,7 +64,7 @@ function finalizarCompra() {
     mostrarCarrito();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     // Mostrar y cerrar carrito
     document.getElementById('abrir-carrito').onclick = function(e) {
         e.preventDefault();
@@ -84,4 +84,24 @@ document.addEventListener('DOMContentLoaded', () => {
             mostrarCarrito();
         };
     });
+
+    // Menú hamburguesa responsive
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav.menu');
+    if(menuToggle && nav){
+        menuToggle.addEventListener('click', function() {
+            nav.classList.toggle('open');
+        });
+    }
+
+    // Submenu horizontal en mobile
+    const servicios = document.querySelector('.menu-servicios');
+    if(servicios) {
+        servicios.addEventListener('click', function(e) {
+            if(window.innerWidth <= 700) {
+                e.preventDefault();
+                servicios.classList.toggle('open-submenu');
+            }
+        });
+    }
 });

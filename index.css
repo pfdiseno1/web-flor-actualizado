@@ -11,6 +11,7 @@
 html, body {
     overflow-x: hidden;
     width: 100%;
+    max-width: 100%;
 }
 body{
     position: relative;
@@ -669,4 +670,94 @@ footer{
     font-style: italic;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); 
     
+}
+
+@media (max-width: 700px) {
+    .menu-toggle {
+        display: block;
+        align-items: center;
+        background:  #01edff;
+        color:#0a3d62;
+        border-radius: 8px;
+        padding: 8px 18px;
+        border: none;
+    }
+    .menu-toggle:hover {
+        background: #3cb5f2;
+        color: #fff;
+    }
+    header {
+        width: 100%;
+        padding: 10px 0;
+        border-radius: 0;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .logo-container {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        padding-left: 12px;
+    }
+    .site-name {
+        font-size: 16px;
+    }
+    nav.menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background:none;
+        border-radius: 10px;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        width: 80vw;
+        z-index: 2000;
+        padding: 20px 0;
+        flex-direction: column;
+        gap: 18px;
+    }
+    nav.menu.open {
+        display: flex;
+    }
+    nav.menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding-left: 0;
+    }
+    nav.menu ul li {
+        margin: 8px 0;
+    }
+    nav.menu ul li a {
+        font-size: 17px;
+        margin: 0 0 0 12px;
+        display: block;
+        width: 100%;
+    }
+    /* Submenu oculto por defecto en mobile */
+    .menu-servicios .submenu {
+        display: none;
+        /*flex-direction: row;*/
+        position: static !important;
+        background: none;
+        box-shadow: none;
+        border-radius: 0;
+        padding-left: 0;
+    }
+    /* Submenu visible cuando el padre tiene .open-submenu */
+    nav.menu ul li.open-submenu > .submenu {
+        display: flex !important;
+        flex-direction: row;
+        gap: 8px;
+    }
+    .menu-servicios .submenu li {
+        padding: 10px 12px;
+        white-space: nowrap;
+    }
+    /* Flecha para indicar submenu */
+    nav.menu ul li.menu-servicios > a::after {
+        content: " ▼";
+        font-size: 0.9em;
+    }
 }
