@@ -708,7 +708,7 @@ footer{
         position: absolute;
         top: 60px;
         right: 10px;
-        background:none;
+        background:#01edff;;
         border-radius: 10px;
         box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         width: 80vw;
@@ -731,6 +731,7 @@ footer{
     }
     nav.menu ul li a {
         font-size: 17px;
+        color: antiquewhite;
         margin: 0 0 0 12px;
         display: block;
         width: 100%;
@@ -754,6 +755,9 @@ footer{
     .menu-servicios .submenu li {
         padding: 10px 12px;
         white-space: nowrap;
+    }
+    .menu-servicios .submenu li a {
+        color: #fff !important;
     }
     /* Flecha para indicar submenu */
     nav.menu ul li.menu-servicios > a::after {
